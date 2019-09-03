@@ -1,6 +1,6 @@
 //Login.js
 angular
-  .module('app')
+  .module('app',['oitozero.ngSweetAlert'])
   .controller('LoginCtrl', LoginCtrl)
 
 
@@ -26,12 +26,13 @@ login = function(){
 
       //chamar SWEETALERT
       console.log( 'é verdade');
-      SweetAlert({
-        type: "error",
-        title: "Error!",
-        text: "fail",
-        confirmButtonText: "OK"
-      });
+     
+        SweetAlert
+        SweetAlert.swal("I'm a fancy Alert");
+     
+     }
+     else{
+      SweetAlert.swal("I'm a fancy Alert");
      }
 
   }, function (err) {
